@@ -1,16 +1,16 @@
 module.exports = {
-  title: 'Giveth Docs',
+  title: 'Giveth Beta Docs',
   tagline: 'Documentation and Guides for Giveth.io',
-  url: 'https://docs.giveth.io',
+  url: 'https://docs.beta.giveth.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'giveth', // Usually your GitHub org/user name.
-  projectName: 'giveth-docs', // Usually your repo name.
+  projectName: 'giveth-beta-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'Giveth Documentation',
+      title: 'beta.giveth.io Documentation',
       logo: {
         alt: 'Giveth Docs Logo',
         src: 'img/logo.svg'
@@ -30,7 +30,7 @@ module.exports = {
         },
         { to: 'blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/giveth/giveth-docs',
+          href: 'https://github.com/giveth/giveth-beta-docs',
           label: 'GitHub',
           position: 'right'
         }
@@ -74,7 +74,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/giveth/giveth-docs'
+              href: 'https://github.com/giveth/giveth-beta-docs'
             }
           ]
         }
@@ -91,7 +91,7 @@ module.exports = {
 
         path: 'guides',
 
-        editUrl: 'https://github.com/giveth/giveth-docs/edit/master/',
+        editUrl: 'https://github.com/giveth/giveth-beta-docs/edit/master/',
 
         routeBasePath: 'guides',
 
@@ -110,12 +110,12 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/giveth/giveth-docs/edit/master/'
+          editUrl: 'https://github.com/giveth/giveth-beta-docs/edit/master/'
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: 'https://github.com/giveth/giveth-docs/edit/master/'
+          editUrl: 'https://github.com/giveth/giveth-beta-docs/edit/master/'
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css')
