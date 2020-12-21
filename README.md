@@ -1,7 +1,7 @@
-# docs.giveth.io
-[![Action Status](https://github.com/giveth/giveth-docs/workflows/deploy-docs/badge.svg)](https://github.com/giveth/giveth-docs/actions)
+# docs.beta.giveth.io
+[![Action Status](https://github.com/giveth/giveth-beta-docs/workflows/deploy-docs/badge.svg)](https://github.com/giveth/giveth-beta-docs/actions)
 
-Visit the [Giveth Docs](https://docs.giveth.io/)
+Visit the [Giveth Docs](https://docs.beta.giveth.io/)
 
 *This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.*
 
