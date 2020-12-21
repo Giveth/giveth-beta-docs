@@ -1,7 +1,14 @@
 # docs.beta.giveth.io
 [![Action Status](https://github.com/giveth/giveth-beta-docs/workflows/deploy-docs/badge.svg)](https://github.com/giveth/giveth-beta-docs/actions)
 
-Visit the [Giveth Docs](https://docs.beta.giveth.io/)
+**Attention!** Giveth maintains two very different versions of a donation application:
+
+https://beta.giveth.io (Internal release, predates version2)
+https://giveth.io (Version2 of the donatin applications)
+
+**BOTH DAPPS** have **dedicated documentation**.
+
+Visit the [Giveth Beta Docs](https://docs.beta.giveth.io/)
 
 *This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.*
 
