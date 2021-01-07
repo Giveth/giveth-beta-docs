@@ -1,7 +1,7 @@
 module.exports = {
   docsSidebar: {
-    Installation: ['installation', 'run-giveth2', 'run-giveth2-backend'],
-    Guidelines: ['contributors', 'dev-guidelines'],
+    'Getting Start': ['installation', 'contributors'],
+    'Architecture': ['link-preview'],
     Reference: ['styleguide']
   }
 }
