@@ -12,12 +12,20 @@ First we tried to use prerender.io service, but it didn't make success, because 
 
 The final solution was writing a separated service to handle the request and detect if it is a social media bot or not. If it is a bot, the service returns the response with an empty body and correct metadata (i.e. title, description and image) and sends it as the response. If it is not a bot, the service plays a proxy role and proxy it to the netlify server. The **detection** process is done in **nginx**.
 
+
 ## Install and Usage
+### Preview Server
+    git clone https://github.com/Giveth/giveth-1-preview
+    cd giveth-1-preview
+    
+    ... Create and fill config.js in format similar to ./config.sample.js
+    
     npm install
     npm start
-This command runs the server on the default port (3000).
 
-## Nginx Configuration
+
+### Nginx Configuration
+Below configuration of nginx serve http requests to port 80. In order to response https necessary ssl configuration should be added. 
 
 ```nginx
 server {
@@ -39,10 +47,10 @@ server {
             set $prerender 0;
         }
         if ($prerender = 1) {
-            proxy_pass http://127.0.0.1:3000;
+            proxy_pass http://127.0.0.1:3000; // port can be different based on giveth-1-preview config.js content
         }
         if ($prerender = 0) {
-            proxy_pass https://giveth-dapp.netlify.app;
+            proxy_pass https://giveth-dapp.netlify.app; // It's where develop.giveth.io is hosted on netlify 
         }
     }
 }
