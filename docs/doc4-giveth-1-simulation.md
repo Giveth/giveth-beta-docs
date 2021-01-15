@@ -6,7 +6,7 @@ title: Giveth 1 Simulation
 [This project](https://github.com/Giveth/giveth-1-simulation) runs to fix conflicts between the [Giveth-Feathers](https://github.com/Giveth/feathers-giveth) DB and network ( smart contracts)
 and it runs twice a day in develop server with this crontab job
 
-`0 */12 * * * cd /home/deploy/giveth-1-simulation && npm run start:develop`
+`0  */12 * * *   cd /home/deploy/giveth-1-simulation && NODE_ENV=develop /home/deploy/.nvm/versions/node/v10.23.0/bin/node /home/deploy/giveth-1-simulation/src/index.js >> /home/deploy/giveth-1-simulation/data/log/simulation-cron.log`
 
 ## Table of content
 
