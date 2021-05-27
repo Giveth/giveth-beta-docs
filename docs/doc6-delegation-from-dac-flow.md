@@ -1,5 +1,6 @@
 ---
-id: delegation-from-dac-flow title: Delegation to DAC Flow
+id: delegation-from-dac-flow
+title: Delegation to DAC Flow
 ---
 Below steps describes the money flow since it comes from home network to Giveth, until it goes to a Milestone or
 Campaign:
