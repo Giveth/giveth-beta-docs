@@ -1,8 +1,8 @@
 ---
-id: delegation-from-dac-flow
-title: Delegation to DAC Flow
+id: delegation-from-community-flow
+title: Delegation to Community Flow
 ---
-Below steps describes the money flow since it comes from home network to Giveth, until it goes to a Milestone or
+Below steps describes the money flow since it comes from home network to Giveth, until it goes to a Trace or
 Campaign:
 
 1. The User (call it **Donor**) clicks on `Donate` button in some Community view and donates to the Community.
@@ -18,7 +18,7 @@ Campaign:
    status: 'Pending'
    mined: false,
    ownerType: 'giver',
-   ownerTypeId: <donor's address who donated to dac>,
+   ownerTypeId: <donor's address who donated to community>,
    delegateType: 'community',
    pledgeId: '0',
    delegateTypeId: <community Id>,
@@ -43,7 +43,7 @@ Campaign:
    
 
 5. The Community owner goes to some project's (project can be either a `Trace` or  a `Campaing`) page and delegates money (we
-   call it `delegatedMoney`) from `DAC` to the project.
+   call it `delegatedMoney`) from `Community` to the project.
    
    1. A new donation object like below would be created (we call this `delegated` donation in this document):
    ```json

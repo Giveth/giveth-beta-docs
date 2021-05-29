@@ -97,14 +97,14 @@ and it runs twice a day in develop server with this crontab job
   it's not in feathers-giveth, it create these DACs
 * **Sync Campaigns**:  If there is any campaign in network and for any reason
   it's not in feathers-giveth, it create these Campaigns
-* **Sync Milestones**: If there is any milestone in network and for any reason
-  it's not in feathers-giveth, it create these Milestones
+* **Sync Traces**: If there is any trace in network and for any reason
+  it's not in feathers-giveth, it create these Traces
 * **Sync donations with network**: if there is missing donations in DB
   or for any reason the donations stuck in `Pending` status
   it fixed it
-*  **Update donationsCounter**: If there is any conflict in `Milestone` or `Campaign` or
+*  **Update donationsCounter**: If there is any conflict in `Trace` or `Campaign` or
    `Dac` donationsCounter and it's not up to date, this script resolve that
-* **Update milestone statuses**: if the status of any milestone is not up to date and not synced with network,
-  the script will resolve that and update the milestone
+* **Update trace statuses**: if the status of any trace is not up to date and not synced with network,
+  the script will resolve that and update the trace
 * **Unset pendingAmountRemaining from committed donations**
 
