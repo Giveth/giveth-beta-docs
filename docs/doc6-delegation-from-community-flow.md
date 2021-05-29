@@ -14,7 +14,7 @@ Campaign:
 
 3. A new `Pending` donation (a donation with `Pending` status) record would be created in Feathers including this data
    
-   ```json
+   ```
    status: 'Pending'
    mined: false,
    ownerType: 'giver',
@@ -34,7 +34,7 @@ Campaign:
    ---
    Feathers server processes the event and after the `donated` donation will be patched with this data:
 
-   ```json
+   ```
    status: 'Waiting',
    mined: true,
    pledgeId: <id of pledge money moved to> 
@@ -46,7 +46,7 @@ Campaign:
    call it `delegatedMoney`) from `Community` to the project.
    
    1. A new donation object like below would be created (we call this `delegated` donation in this document):
-   ```json
+   ```
    status: 'ToApprove',
    mined: false,
    parentDonations: [ <the donated donation object id in mongo> ],
@@ -64,7 +64,7 @@ Campaign:
 
    2. To prevent double spending money from the parent donation (`donated` donation ) a field `pendingAmountRemaining`
       would be added to parent donation:
-   ```json
+   ```
    amountRemaining: <new amountRemaining>
    pendingAmountRemaining: <amountRemaining - delegatedMoney>
    ```
@@ -78,11 +78,11 @@ Campaign:
    donation item, if he/she clicks on `Commit` and sign the transaction:
    
    1. for prevent the double spending, the `delegated` donation would be updated with 
-   ```json
+   ```
    pendingAmountRemaining: '0'
    ```
    2. A new donation will be created (we call this `final` donation in this document) including below data:
-   ```json
+   ```
    status: 'Committed',
    mined: false,
    parentDonations: [ <the delegated donation object id in mongo> ],
@@ -95,13 +95,11 @@ Campaign:
    ownerType: <trace or campaign>,
    giverAddress: <Donor address>,
    ```
-  <br> 
 
 8. After the transaction is mined a `Transfer` event comes to the Feathers server. Processing that events results in:
 
    1.  a `delegated` donation's `amountRemaining` will be replaced with its `pendingamountRemaining`(was zero)
       so then the `lessThanCuttoff` for this donation will be changed to `true`
-
    2. the `final` donation's `mined` field will become `true`, and `pledgeId` will fill with project's pledgeId. The
       money is ready for collect now.
       
@@ -110,10 +108,10 @@ Campaign:
    1. The `donated` donation's status will become `Rejected` and add `pendingAmountRemaining: 0`
       
    2. A new donation will be created with including data (we call this `returned` donation in this document):
-   ```json
+   ```
     status: 'ToApprove',
     mined: false,
-   parentDonations: [ <the delegated donation object id in mongo> ],
+    parentDonations: [ <the delegated donation object id in mongo> ],
     isReturn: true,// it's important, in this flow this the first donation with isReturn:true
     lessThanCutoff: false,
     amount: <delegated amount>,
