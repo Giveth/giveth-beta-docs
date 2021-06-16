@@ -93,8 +93,8 @@ and it runs twice a day in develop server with this crontab job
   just get new ones)
 * Getting all states from network (and cache it to in next runs
   just get new ones)
-* **Sync DACs**: If there is any dac in network and for any reason
-  it's not in feathers-giveth, it create these DACs
+* **Sync Communities**: If there is any community in network and for any reason
+  it's not in feathers-giveth, it create these Communities
 * **Sync Campaigns**:  If there is any campaign in network and for any reason
   it's not in feathers-giveth, it create these Campaigns
 * **Sync Traces**: If there is any trace in network and for any reason
@@ -103,7 +103,7 @@ and it runs twice a day in develop server with this crontab job
   or for any reason the donations stuck in `Pending` status
   it fixed it
 *  **Update donationsCounter**: If there is any conflict in `Trace` or `Campaign` or
-   `Dac` donationsCounter and it's not up to date, this script resolve that
+   `Community` donationsCounter and it's not up to date, this script resolve that
 * **Update trace statuses**: if the status of any trace is not up to date and not synced with network,
   the script will resolve that and update the trace
 * **Unset pendingAmountRemaining from committed donations**
